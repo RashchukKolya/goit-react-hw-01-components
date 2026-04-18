@@ -1,7 +1,7 @@
 import styles from './FriendList.module.css';
 import clsx from 'clsx';
 
-export const FriendListItem = ({ name, avatar, isOnline, key }) => {
+export const FriendListItem = ({ name, avatar, isOnline }, { key }) => {
   return (
     <li className={styles.item} key={key}>
       <span

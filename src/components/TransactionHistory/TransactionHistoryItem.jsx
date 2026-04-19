@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
 export const TransactionHistoryItem = ({
   item: { id, type, amount, currency },
@@ -9,4 +10,11 @@ export const TransactionHistoryItem = ({
       <td className={styles['transaction-cell']}>{currency}</td>
     </tr>
   );
+};
+
+TransactionHistoryItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };

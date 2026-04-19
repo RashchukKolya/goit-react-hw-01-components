@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './FriendList.module.css';
 import clsx from 'clsx';
 
@@ -14,4 +15,11 @@ export const FriendListItem = ({ name, avatar, isOnline }, { key }) => {
       <p className={styles.name}>{name}</p>
     </li>
   );
+};
+
+FriendListItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  key: PropTypes.number.isRequired,
 };
